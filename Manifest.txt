@@ -1,0 +1,9 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/upnp_igd
+lib/UPnP/control/device/internet_gateway_device.rb
+lib/UPnP/control/service/layer_3_forwarding.rb
+lib/UPnP/control/service/wan_common_interface_config.rb
+lib/UPnP/control/service/wan_ip_connection.rb

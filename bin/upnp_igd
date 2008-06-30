@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require 'UPnP/control/device/internet_gateway_device'
+
+ssdp = UPnP::SSDP.new
+timeout = ARGV.shift
+timeout = if timeout then
+            begin
+              timeout = Integer timeout
+            rescue
+              abort <<-EOF
+Usage: #{$0} [timeout]
+
+Prints information about UPnP internet gateway devices
+              EOF
+            end
+          else
+            1
+          end
+
+ssdp.timeout = timeout
+
+gateways = UPnP::Control::Device::InternetGatewayDevice.search ssdp
+
+if gateways.empty? then
+  puts 'No internet gateway devices found'
+else
+  gateways.each do |igd| igd.print_info end
+end
+
