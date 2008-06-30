@@ -14,6 +14,7 @@ A UPnP extension for Internet Gateway Devices
 * Command-line utility that displays information about a UPnP gateway
 * Example of using some UPnP APIs
 * Does not set anything on the device
+* Only tested against miniupnpd
 
 == SYNOPSIS:
 

@@ -4,7 +4,19 @@ require 'UPnP/control/service/layer_3_forwarding'
 require 'UPnP/control/service/wan_ip_connection'
 require 'UPnP/control/service/wan_common_interface_config'
 
+##
+# A UPnP Internet Gateway Device control point that provides friendly
+# accessors to its component services and provides a handy method to dump
+# information about the device.
+#
+# http://www.upnp.org/standardizeddcps/igd.asp
+
 class UPnP::Control::Device::InternetGatewayDevice < UPnP::Control::Device
+
+  ##
+  # The version of UPnP-IGD you are using
+
+  VERSION = '1.0.0'
 
   ##
   # Version 1 URN for InternetGatewayDevice
